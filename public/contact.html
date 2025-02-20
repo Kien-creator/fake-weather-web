@@ -1,0 +1,74 @@
+<!-- Contact Page (contact.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - FakeWeather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme-btn.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/assets/logo.png" alt="logo.png">
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button id="login-btn" class="login-btn" onclick="window.location.href='login.html'">Login</button>
+                <button id="register-btn" class="register-btn"
+                    onclick="window.location.href='register.html'">Register</button>
+                <button id="dashboard-btn" class="dashboard-btn" onclick="window.location.href='dashboard.html'"
+                    style="display: none;">Dashboard</button>
+            </div>
+            <div for="theme" class="theme">
+                <span class="theme__toggle-wrap">
+                    <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+                    <span class="theme__icon">
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                    </span>
+                </span>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="formMessage"></p>
+    </div>
+    <footer>
+        <p>&copy; 2025 FakeWeather. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("formMessage").textContent = "Thank you for reaching out! We'll get back to you soon.";
+        });
+    </script>
+    <script src="script.js"></script>
+    <script src="authCheck.js"></script>
+    <script src="theme-toggle.js"></script>
+</body>
+</html>
