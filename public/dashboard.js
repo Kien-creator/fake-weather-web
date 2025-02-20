@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     const API_URL = window.location.hostname.includes("localhost") 
     ? "http://localhost:5000" 
-    : "https://your-app.onrender.com";
+    : "https://fake-weather-web.onrender.com";
 
     const res = await fetch(`${API_URL}/login`, { 
         headers: { Authorization: `Bearer ${token}` }, 
