@@ -1,58 +1,208 @@
+/* Ultra-Modern Light Theme */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #283E51, #0A2342);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ultra-Modern Dark Theme */
+body.dark-theme {
+    background: linear-gradient(135deg, #1F1F1F, #0D0D0D);
+    color: #EEE;
+}
+
+/* Navigation Bar */
+/* Navbar Styling */
+header {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Navbar Container */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+/* Logo */
+.logo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px; /* Adjusted size */
+    height:100px; /* Adjusted size */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0 auto; /* Centers nav links */
+    align-items: center;
+}
+
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.nav-links li a:hover {
+    color: #FFD700;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Right Section (Dashboard & Theme Toggle) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.auth-buttons button {
+    padding: 12px 22px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+}
+
+.login-btn {
+    background-color: #23A6D5;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #1E90FF;
+    transform: translateY(-3px);
+}
+
+.register-btn {
+    background-color: #FFD700;
+    color: black;
+}
+
+.register-btn:hover {
+    background-color: #FFC107;
+    transform: translateY(-3px);
+}
+
+/* Dashboard Button */
+.dashboard-btn {
+    background-color: #8A2BE2;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.dashboard-btn:hover {
+    background-color: #7B1FA2;
+    transform: translateY(-3px);
+}
 .team-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Hiển thị linh hoạt */
     gap: 20px;
     justify-content: center;
     align-items: center;
-    padding: 40px 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto; /* Căn giữa */
 }
 
 .team-member {
-    background: #1e2a38;
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
+    border-radius: 10px;
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s;
 }
 
 .team-member:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05);
 }
 
 .team-member img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #fff;
-    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
 }
 
 .team-member h3 {
-    font-size: 20px;
+    font-size: 1.2rem;
     color: #fff;
-    margin: 10px 0;
 }
 
 .team-member p {
-    font-size: 14px;
-    color: #bbb;
+    font-size: 0.9rem;
+    color: #ddd;
     margin: 5px 0;
 }
 
-.contact-button {
-    display: inline-block;
-    background: #ff9800;
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 14px;
-    margin-top: 10px;
-    transition: background 0.3s;
+.team-member button {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.contact-button:hover {
-    background: #e68900;
+.team-member button:hover {
+    background-color: #ffdb4d;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .team-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cột trên tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-container {
+        grid-template-columns: 1fr; /* 1 cột trên điện thoại */
+    }
 }
