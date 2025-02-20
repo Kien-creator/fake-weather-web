@@ -4,7 +4,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    const res = await fetch("http://localhost:5000/login", {
+    const res = await fetch("https://fake-weather-web.onrender.com/login.html", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
     githubBtn.addEventListener("click", function () {
         alert("GitHub login is in development. Please try again later.");
     });
-    
     if (forgotPasswordLink) {
         forgotPasswordLink.addEventListener("click", function (event) {
             event.preventDefault();

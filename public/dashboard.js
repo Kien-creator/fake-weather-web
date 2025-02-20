@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     // Fetch user info
-    const res = await fetch("http://localhost:5000/user", {
+    const res = await fetch("https://fake-weather-web.onrender.com/user", {
         headers: { Authorization: `Bearer ${token}` },
     });
 
