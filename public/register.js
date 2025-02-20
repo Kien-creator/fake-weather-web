@@ -59,7 +59,11 @@ document.getElementById("registerForm").addEventListener("submit", async functio
         return;
     }
 
-    const response = await fetch("https://fake-weather-web.onrender.com/register.html", {
+    const API_URL = window.location.hostname.includes("localhost")
+        ? "http://localhost:5000"
+        : "https://your-app.onrender.com";
+
+    const res = await fetch(`${API_URL}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password })

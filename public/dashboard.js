@@ -5,10 +5,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         alert("You must log in first!");
         window.location.href = "login.html";
     }
+    const API_URL = window.location.hostname.includes("localhost") 
+    ? "http://localhost:5000" 
+    : "https://your-app.onrender.com";
 
-    // Fetch user info
-    const res = await fetch("https://fake-weather-web.onrender.com/user", {
-        headers: { Authorization: `Bearer ${token}` },
+    const res = await fetch(`${API_URL}/login`, { 
+        headers: { Authorization: `Bearer ${token}` }, 
     });
 
     const data = await res.json();
