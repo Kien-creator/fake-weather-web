@@ -71,4 +71,5 @@ document.getElementById("registerForm").addEventListener("submit", async functio
 
     const data = await response.json();
     alert(data.message);
+
 });
