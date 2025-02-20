@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - FakeWeather</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script defer src="dashboard.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/logo.png" alt="logo.png">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Settings</a></li>          
+            </ul>
+            <div class="auth-buttons">
+                <button id="logout-btn" class="logout-btn" onclick="logout()">Logout</button>  
+            </div> 
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        <h2>Welcome, <span id="username">User</span>!</h2>
+        <p>Your weather updates will appear here.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 FakeWeather. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

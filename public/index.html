@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeWeather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme-btn.css">
+    <!-- Leaflet.js for Maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/assets/logo.png" alt="logo">
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button id="login-btn" class="login-btn" onclick="window.location.href='login.html'">Login</button>
+                <button id="register-btn" class="register-btn"
+                    onclick="window.location.href='register.html'">Register</button>
+                <button id="dashboard-btn" class="dashboard-btn" onclick="window.location.href='dashboard.html'"
+                    style="display: none;">Dashboard</button>
+            </div>
+            <div for="theme" class="theme">
+                <span class="theme__toggle-wrap">
+                    <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+                    <span class="theme__icon">
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                    </span>
+                </span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Find Your City's Weather</h1>
+        <div class="search">
+            <input type="text" id="cityInput" placeholder="Enter city name...">
+            <button onclick="getWeather()">Search</button>
+        </div>
+
+        <!-- Weather Card and Map Container -->
+        <div class="weather-map-container">
+            <div id="weather-info" class="weather-card">
+                <h2 id="city-name"></h2>
+                <p id="temperature"></p>
+                <p id="weather-condition"></p>
+                <p id="humidity"></p>
+                <p id="wind-speed"></p>
+            </div>
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <!-- Hourly Weather Forecast Section -->
+    <section class="hourly-weather">
+        <h2>Hourly Forecast</h2>
+        <div class="hourly-container">
+            <div id="hourly-scroll" class="hourly-scroll">
+                <!-- Hourly data will be injected here dynamically -->
+            </div>
+        </div>
+        <h2>Temperature Chart</h2>
+        <div class="chart-container">
+            
+            <canvas id="temperatureChart"></canvas>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">🌤 FakeWeather</div>
+        </div>
+        <p class="footer-text">&copy; 2025 FakeWeather. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="authCheck.js"></script>
+    <script src="theme-toggle.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+</body>
+
+</html>

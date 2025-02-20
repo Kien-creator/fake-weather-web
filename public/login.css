@@ -1,0 +1,309 @@
+/* Ultra-Modern Theme */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #283E51, #0A2342);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dark Mode */
+body.dark-theme {
+    background: linear-gradient(135deg, #1F1F1F, #0D0D0D);
+    color: #EEE;
+}
+
+/* Navigation Bar */
+/* Navbar Styling */
+header {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Navbar Container */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+/* Logo */
+.logo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px; /* Adjusted size */
+    height:100px; /* Adjusted size */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0 auto; /* Centers nav links */
+    align-items: center;
+}
+
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.nav-links li a:hover {
+    color: #FFD700;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Right Section (Dashboard & Theme Toggle) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.auth-buttons button {
+    padding: 12px 22px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+}
+
+.login-btn {
+    background-color: #23A6D5;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #1E90FF;
+    transform: translateY(-3px);
+}
+
+.register-btn {
+    background-color: #FFD700;
+    color: black;
+}
+
+.register-btn:hover {
+    background-color: #FFC107;
+    transform: translateY(-3px);
+}
+/* Login Container */
+.login-container {
+    background: rgba(255, 255, 255, 0.15); /* Slightly more opaque */
+    padding: 40px;
+    margin: 80px auto;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Headings */
+.login-container h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+/* Đảm bảo label được căn trái */
+.input-group label {
+    display: block; /* Giúp label hiển thị trên một dòng riêng */
+    text-align: left; /* Căn lề trái */
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Tạo khoảng cách với input */
+}
+
+/* Căn lề input và đảm bảo text bên trong cũng căn trái */
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: left; /* Căn text trong input sang trái */
+    padding-left: 10px; /* Tạo khoảng cách giữa chữ và viền trái */
+}
+
+/* Căn trái input */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin: 8px 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    text-align: left; /* Căn chữ sang trái */
+    padding-left: 12px; /* Thêm khoảng cách với viền trái */
+}
+
+/* Placeholder vẫn hiển thị màu nhẹ */
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: left; /* Đảm bảo placeholder cũng căn trái */
+}
+
+
+/* Remember Me */
+.remember-me {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 14px;
+    color: white;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.remember-me input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Login Button */
+.login-submit {
+    width: 100%;
+    padding: 14px;
+    background: #23A6D5;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-submit:hover {
+    background: #1E90FF;
+    transform: translateY(-3px);
+}
+
+/* Đổi màu "Forgot Password?" */
+.forgot-password {
+    color: #FFD700; /* Thay đổi thành màu xanh dương */
+    text-decoration: none; /* Xóa gạch chân */
+    font-weight: bold; /* Làm đậm chữ */
+}
+
+.forgot-password:hover {
+    color: #ff004c; /* Màu đậm hơn khi di chuột vào */
+    text-decoration: underline; /* Gạch chân khi hover */
+}
+
+/* Đổi màu "Register here" */
+.register-text a {
+    color: #FFD700; /* Thay đổi thành màu xanh dương */
+    font-weight: bold; /* Làm đậm chữ */
+    text-decoration: none;
+}
+
+.register-text a:hover {
+    color: #ff004c; /* Màu đậm hơn khi di chuột vào */
+    text-decoration: underline;
+}
+
+
+/* Social Login Buttons */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.social-login button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+.google-btn {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.google-btn:hover {
+    background-color: #f1f1f1;
+}
+
+.github-btn {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+}
+
+.github-btn:hover {
+    background-color: #222;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px 0;
+    margin-top: 40px;
+    backdrop-filter: blur(8px);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #ddd;
+}

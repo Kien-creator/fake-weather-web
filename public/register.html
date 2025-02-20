@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - FakeWeather</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="theme-btn.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/logo.png" alt="FakeWeather Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+            </div>
+            <div for="theme" class="theme">
+                <span class="theme__toggle-wrap">
+                    <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+                    <span class="theme__icon">
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                    </span>
+                </span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="register-container">
+            <h2>Create an Account</h2>
+            <p class="subtitle">Join <strong>FakeWeather</strong> today!</p>
+            <form id="registerForm">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Create a password">
+                </div>
+                
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+                </div>
+                
+                <div class="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+                </div>
+                
+                <button type="submit" class="register-submit">Register</button>
+            </form>
+
+            <div class="divider">Or sign up with</div>
+            <div class="social-login">
+                <button class="google-btn">Sign up with Google</button>
+                <button class="github-btn">Sign up with GitHub</button>
+            </div>
+
+            <p class="login-text">Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">🌤 FakeWeather</div>
+        </div>
+        <p class="footer-text">&copy; 2025 FakeWeather. All Rights Reserved.</p>
+    </footer>
+    <!-- Terms & Conditions Modal -->
+<div id="termsModal" class="modal">
+    <div class="modal-content">
+        <h3>Terms & Conditions</h3>
+        <p>Chưa có gì</p>
+        <button id="agreeBtn">✅Đồng ý</button>
+        <button id="closeBtn">❌Đóng </button>
+    </div>
+</div>
+
+    <script src="register.js"></script>
+    <script src="theme-toggle.js"></script>
+    
+</body>
+</html>

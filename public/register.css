@@ -1,0 +1,398 @@
+/* Ultra-Modern Light Theme */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #283E51, #0A2342);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ultra-Modern Dark Theme */
+body.dark-theme {
+    background: linear-gradient(135deg, #1F1F1F, #0D0D0D);
+    color: #EEE;
+}
+
+/* Navigation Bar */
+/* Navbar Styling */
+header {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Navbar Container */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+/* Logo */
+.logo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px; /* Adjusted size */
+    height:100px; /* Adjusted size */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0 auto; /* Centers nav links */
+    align-items: center;
+}
+
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.nav-links li a:hover {
+    color: #FFD700;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Right Section (Dashboard & Theme Toggle) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.auth-buttons button {
+    padding: 12px 22px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+}
+
+.login-btn {
+    background-color: #23A6D5;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #1E90FF;
+    transform: translateY(-3px);
+}
+
+.register-btn {
+    background-color: #FFD700;
+    color: black;
+}
+
+.register-btn:hover {
+    background-color: #FFC107;
+    transform: translateY(-3px);
+}
+
+/* Container Styling */
+/* Căn giữa trang */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+/* Đảm bảo label được căn trái */
+.input-group label {
+    display: block; /* Giúp label hiển thị trên một dòng riêng */
+    text-align: left; /* Căn lề trái */
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Tạo khoảng cách với input */
+}
+
+/* Căn lề input và đảm bảo text bên trong cũng căn trái */
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: left; /* Căn text trong input sang trái */
+    padding-left: 10px; /* Tạo khoảng cách giữa chữ và viền trái */
+}/* Căn trái input */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin: 8px 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    text-align: left; /* Căn chữ sang trái */
+    padding-left: 12px; /* Thêm khoảng cách với viền trái */
+}
+
+/* Placeholder vẫn hiển thị màu nhẹ */
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: left; /* Đảm bảo placeholder cũng căn trái */
+}
+
+
+/* Đảm bảo form không bị lệch */
+.register-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.register-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.register-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-container label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.register-container input {
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.terms input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.terms label {
+    font-size: 14px;
+}
+/* Đổi màu "Terms & Conditions" khi hover */
+.terms a {
+    color: #FFD700; /* Màu mặc định */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    color: #ff004c; /* Màu khi hover */
+    text-decoration: underline;
+}
+
+/* Đổi màu "Login here" khi hover */
+.login-text a {
+    color: #FFD700; /* Màu mặc định */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-text a:hover {
+    color: #ff004c; /* Màu khi hover */
+    text-decoration: underline;
+}
+
+.register-submit {
+    padding: 12px;
+    font-size: 18px;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+.register-submit:hover {
+    background-color: #ff9900;
+}
+
+p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+p a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Social Login Buttons */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.social-login button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+.google-btn {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.google-btn:hover {
+    background-color: #f1f1f1;
+}
+
+.github-btn {
+    background-color: #24292E;
+    color: white;
+}
+
+.github-btn:hover {
+    background-color: #181A1D;
+}
+
+/* Modal Background */
+.modal {
+    display: none; /* Ẩn mặc định */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background: #1e1e1e;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Buttons */
+.modal-content button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#agreeBtn {
+    background: #28a745;
+    color: white;
+}
+
+#closeBtn {
+    background: #dc3545;
+    color: white;
+}
+
+#agreeBtn:hover {
+    background: #218838;
+}
+
+#closeBtn:hover {
+    background: #c82333;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px 0;
+    margin-top: 40px;
+    backdrop-filter: blur(8px);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #ddd;
+}

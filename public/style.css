@@ -1,0 +1,285 @@
+/* Ultra-Modern Light Theme */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #283E51, #0A2342);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ultra-Modern Dark Theme */
+body.dark-theme {
+    background: linear-gradient(135deg, #1F1F1F, #0D0D0D);
+    color: #EEE;
+}
+
+/* Navigation Bar */
+/* Navbar Styling */
+header {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Navbar Container */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+/* Logo */
+.logo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px; /* Adjusted size */
+    height:100px; /* Adjusted size */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0 auto; /* Centers nav links */
+    align-items: center;
+}
+
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.nav-links li a:hover {
+    color: #FFD700;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Right Section (Dashboard & Theme Toggle) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.auth-buttons button {
+    padding: 12px 22px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+}
+
+.login-btn {
+    background-color: #23A6D5;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #1E90FF;
+    transform: translateY(-3px);
+}
+
+.register-btn {
+    background-color: #FFD700;
+    color: black;
+}
+
+.register-btn:hover {
+    background-color: #FFC107;
+    transform: translateY(-3px);
+}
+
+/* Dashboard Button */
+.dashboard-btn {
+    background-color: #8A2BE2;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.dashboard-btn:hover {
+    background-color: #7B1FA2;
+    transform: translateY(-3px);
+}
+
+/* Weather Section */
+.container {
+    margin-top: 50px;
+}
+
+/* Search Bar */
+.search input {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    width: 250px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+.search button {
+    padding: 12px 18px;
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.weather-map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    min-width: 320px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.weather-card:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+#map {
+    width: 420px;
+    height: 260px;
+    border-radius: 15px;
+}
+
+.hourly-container {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 85%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Inner Scrollable Content */
+.hourly-scroll {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    
+    /* Ensures the scrollbar never shows */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE & Edge */
+}
+
+/* Hides scrollbar for WebKit browsers */
+.hourly-scroll::-webkit-scrollbar {
+    display: none !important;
+    width: 0;
+    height: 0;
+}
+
+.hour-item {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 12px;
+    min-width: 90px;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+}
+
+.hour-item:hover {
+    transform: scale(1.08);
+}
+.chart-container {
+    max-width: 90%;
+    margin: 30px auto; /* Centers chart */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+
+/* Improve chart text visibility */
+.chart-container text {
+    fill: white !important; /* Ensures labels are visible */
+    font-size: 14px;
+}
+
+/* Enhance chart lines */
+.chart-container path {
+    stroke-width: 3px; /* Makes lines bolder */
+}
+
+/* Customize legend appearance */
+.chart-container .legend {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px 0;
+    margin-top: 40px;
+    backdrop-filter: blur(8px);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #ddd;
+}

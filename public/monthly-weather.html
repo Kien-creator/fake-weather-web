@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeWeather</title>
+    <link rel="stylesheet" href="monthly-weather.css">
+    <link rel="stylesheet" href="theme-btn.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/logo.png" alt="logo.png">
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="monthly-weather.html">Monthly Weather</a></li>
+                <li><a href="weather-trends.html">Weather Trends</a></li>
+                <li><a href="detailed-weather.html">Detailed Weather</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button id="login-btn" class="login-btn" onclick="window.location.href='login.html'">Login</button>
+                <button id="register-btn" class="register-btn" onclick="window.location.href='register.html'">Register</button>
+                <button id="dashboard-btn" class="dashboard-btn" onclick="window.location.href='dashboard.html'" style="display: none;">Dashboard</button>
+            </div>  
+            <div for="theme" class="theme">
+                <span class="theme__toggle-wrap">
+                    <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+                    <span class="theme__icon">
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                    </span>
+                </span>
+            </div>                
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h1>Monthly Weather Forecast</h1>
+            <div class="search">
+                <input type="text" id="cityInput" placeholder="Enter city name...">
+                <button onclick="getMonthlyWeather()">Search</button>
+            </div>
+            <div class="month-selector" id="monthSelector"></div>
+            <div id="weather-container" class="calendar"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">🌤 FakeWeather</div>
+            <ul class="footer-nav">
+
+            </ul>
+        </div>
+        <p class="footer-text">&copy; 2025 FakeWeather. All Rights Reserved.</p>
+    </footer>
+
+    <script src="monthly-weather.js"></script>
+    <script src="theme-toggle.js"></script>
+    <script src="authCheck.js"></script>  
+</body>
+</html>
