@@ -62,11 +62,24 @@ app.get("/user", authMiddleware, async (req, res) => {
 // Register Endpoint
 app.post('/register', async (req, res) => {
   try {
+      console.log("🔹 Register request received:", req.body);
+
       const { name, email, password } = req.body;
 
-      // Kiểm tra dữ liệu đầu vào
+      // Kiểm tra xem có thiếu trường nào không
       if (!name || !email || !password) {
           return res.status(400).json({ message: "All fields are required" });
+      }
+
+      // Regex kiểm tra email (chỉ chứa chữ cái, số, ., -, _ và không có khoảng trắng)
+      const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailRegex.test(email)) {
+          return res.status(400).json({ message: "Invalid email format" });
+      }
+
+      // Kiểm tra mật khẩu (không có dấu cách và ít nhất 6 ký tự)
+      if (password.length < 6 || /\s/.test(password)) {
+          return res.status(400).json({ message: "Password must be at least 6 characters and cannot contain spaces" });
       }
 
       // Kiểm tra email đã tồn tại chưa
@@ -75,16 +88,18 @@ app.post('/register', async (req, res) => {
           return res.status(400).json({ message: "Email already exists" });
       }
 
-      // Hash password
+      console.log("🔹 Creating new user:", email);
       const hashedPassword = await bcrypt.hash(password, 10);
       const newUser = new User({ name, email, password: hashedPassword });
 
       await newUser.save();
+      console.log("✅ User registered successfully");
+
       res.status(201).json({ message: "User registered successfully" });
 
   } catch (err) {
-      console.error("Error in /register:", err);
-      res.status(500).json({ error: "Internal Server Error" });
+      console.error("❌ Error in /register:", err);
+      res.status(500).json({ error: err.message });
   }
 });
 
