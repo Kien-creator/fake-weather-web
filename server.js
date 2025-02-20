@@ -61,16 +61,33 @@ app.get("/user", authMiddleware, async (req, res) => {
 
 // Register Endpoint
 app.post('/register', async (req, res) => {
-    try {
-      const { name, email, password } = req.body; // Include name
+  try {
+      const { name, email, password } = req.body;
+
+      // Kiểm tra dữ liệu đầu vào
+      if (!name || !email || !password) {
+          return res.status(400).json({ message: "All fields are required" });
+      }
+
+      // Kiểm tra email đã tồn tại chưa
+      const existingUser = await User.findOne({ email });
+      if (existingUser) {
+          return res.status(400).json({ message: "Email already exists" });
+      }
+
+      // Hash password
       const hashedPassword = await bcrypt.hash(password, 10);
       const newUser = new User({ name, email, password: hashedPassword });
+
       await newUser.save();
       res.status(201).json({ message: "User registered successfully" });
-    } catch (err) {
-      res.status(500).json({ error: err.message });
-    }
-  });
+
+  } catch (err) {
+      console.error("Error in /register:", err);
+      res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
 
 // Login Endpoint
 app.post('/login', async (req, res) => {
