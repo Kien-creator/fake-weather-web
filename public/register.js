@@ -36,3 +36,35 @@ document.getElementById("registerForm").addEventListener("submit", async functio
         alert("An error occurred. Please try again later.");
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const termsLink = document.querySelector('label[for="terms"] a'); // Lấy link Terms & Conditions
+    const termsModal = document.getElementById("termsModal"); // Lấy modal
+    const closeModal = document.getElementById("closeBtn"); // Nút đóng modal
+    const agreeBtn = document.getElementById("agreeBtn"); // Nút đồng ý
+
+    // Khi nhấp vào link "Terms & Conditions"
+    termsLink.addEventListener("click", function (event) {
+        event.preventDefault(); // Ngăn chặn mở link mặc định
+        termsModal.style.display = "flex"; // Hiển thị modal
+    });
+
+    // Khi nhấp vào nút "Đóng"
+    closeModal.addEventListener("click", function () {
+        termsModal.style.display = "none"; // Ẩn modal
+    });
+
+    // Khi nhấp vào nút "Đồng ý"
+    agreeBtn.addEventListener("click", function () {
+        document.getElementById("terms").checked = true; // Chọn checkbox
+        termsModal.style.display = "none"; // Ẩn modal
+    });
+
+    // Khi nhấp bên ngoài modal thì đóng
+    window.addEventListener("click", function (event) {
+        if (event.target === termsModal) {
+            termsModal.style.display = "none";
+        }
+    });
+});
+

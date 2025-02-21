@@ -154,12 +154,12 @@ nav {
 /* Định dạng các thẻ team-member */
 .team-member {
     background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
+    padding: 0px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
-    width: 90%; /* Đảm bảo card chiếm full cột */
+    width: 100%; /* Đảm bảo card chiếm full cột */
 }
 
 .team-member:hover {
