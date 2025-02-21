@@ -142,15 +142,16 @@ nav {
 }
 .team-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(3, 1fr)); /* Hiển thị linh hoạt */
+    grid-template-columns: repeat(3, 1fr); /* Chia layout thành 3 cột */
     gap: 20px;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
     padding: 40px;
     max-width: 1200px;
-    margin: 0 auto; /* Căn giữa */
+    margin: 0 auto;
 }
 
+/* Định dạng các thẻ team-member */
 .team-member {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
@@ -158,42 +159,22 @@ nav {
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
+    width: 100%; /* Đảm bảo card chiếm full cột */
 }
 
 .team-member:hover {
     transform: scale(1.05);
 }
 
+/* Định dạng hình ảnh */
 .team-member img {
     width: 150px;
-    height: 100px;
+    height: 150px; /* Điều chỉnh để ảnh vuông hơn */
+    object-fit: cover; /* Giữ tỉ lệ ảnh */
+    border-radius: 10px;
 }
 
-
-.team-member h3 {
-    font-size: 1.2rem;
-    color: #fff;
-}
-
-.team-member p {
-    font-size: 0.9rem;
-    color: #ddd;
-    margin: 5px 0;
-}
-
-.team-member button {
-    background-color: #ffcc00;
-    color: #333;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.team-member button:hover {
-    background-color: #ffdb4d;
-}
+/* Định dạng nút Contact */
 .contact-btn {
     display: inline-block;
     padding: 10px 20px;
@@ -201,22 +182,22 @@ nav {
     font-weight: bold;
     text-decoration: none;
     color: white;
-    background: linear-gradient(45deg, #ff416c, #ff4b2b); /* Hiệu ứng gradient */
-    border-radius: 25px; /* Bo tròn nút */
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border-radius: 25px;
     transition: 0.3s ease-in-out;
-    box-shadow: 0 4px 10px rgba(255, 75, 43, 0.5); /* Hiệu ứng bóng */
+    box-shadow: 0 4px 10px rgba(255, 75, 43, 0.5);
 }
 
 .contact-btn:hover {
     background: linear-gradient(45deg, #ff4b2b, #ff416c);
-    transform: scale(1.1); /* Hiệu ứng phóng to */
+    transform: scale(1.1);
     box-shadow: 0 6px 15px rgba(255, 75, 43, 0.7);
 }
 
 /* Responsive */
 @media (max-width: 900px) {
     .team-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 cột trên tablet */
+        grid-template-columns: repeat(2, 1fr); /* 2 cột khi màn hình nhỏ hơn */
     }
 }
 
