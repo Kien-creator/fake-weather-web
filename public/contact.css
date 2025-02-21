@@ -142,7 +142,7 @@ nav {
 }
 .team-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Hiển thị linh hoạt */
+    grid-template-columns: repeat(auto-fit, minmax(3, 1fr)); /* Hiển thị linh hoạt */
     gap: 20px;
     justify-content: center;
     align-items: center;
@@ -165,9 +165,10 @@ nav {
 }
 
 .team-member img {
-    width: 100px;
+    width: 150px;
     height: 100px;
 }
+
 
 .team-member h3 {
     font-size: 1.2rem;
@@ -192,6 +193,24 @@ nav {
 
 .team-member button:hover {
     background-color: #ffdb4d;
+}
+.contact-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b); /* Hiệu ứng gradient */
+    border-radius: 25px; /* Bo tròn nút */
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(255, 75, 43, 0.5); /* Hiệu ứng bóng */
+}
+
+.contact-btn:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    transform: scale(1.1); /* Hiệu ứng phóng to */
+    box-shadow: 0 6px 15px rgba(255, 75, 43, 0.7);
 }
 
 /* Responsive */
